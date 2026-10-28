@@ -1,4 +1,3 @@
-// calculos.h
 #pragma once
 
 double doble(double numero) {
