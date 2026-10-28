@@ -2,7 +2,8 @@
 
 #include <iostream>
 #include <cassert>
-#include "calculos.h"
+
+#include "Calculos.h"
 #include "Boleta.h"
 
 int main () {
@@ -10,11 +11,12 @@ int main () {
     Alumno alumno2 = crearAlumno("Juan Perez 1", 5.0, 6.0, 6.0);
     Alumno alumno3 = crearAlumno("Juan Perez 2", 5.0, 6.0, 6.0);
 
-    if (alumno1.promedio() >= 7.0) {
-        std::cout << alumno1.nombre << " aprobó con un promedio de " << alumno1.promedio() << std::endl;
+    double promedio = alumno1.calcularPromedio();
+    if (promedio >= 7.0) {
+        std::cout << alumno1.nombre << " aprobó con un promedio de " << promedio << std::endl;
     } else {
         alumno1.aplicarAjuste(2.0); // Aplica un ajuste de 5 puntos
-        std::cout << alumno1.nombre << " aprobó con un promedio de " << alumno1.promedio() << std::endl;
+        std::cout << alumno1.nombre << " reprobó pero con el ajuste su promedio es " << alumno1.calcularPromedio() << std::endl;
     }
     
     return 0;
