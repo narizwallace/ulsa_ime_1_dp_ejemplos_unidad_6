@@ -67,6 +67,7 @@ vcpkg_installed/
 Testing/
 .cache/
 
-
+# project files
+build/
 main
 main.exe
