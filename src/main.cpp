@@ -18,6 +18,14 @@ int main () {
         alumno1.aplicarAjuste(2.0); // Aplica un ajuste de 5 puntos
         std::cout << alumno1.nombre << " reprobó pero con el ajuste su promedio es " << alumno1.calcularPromedio() << std::endl;
     }
-    
+
+    Boleta boleta;
+    boleta.agregarAlumno(alumno1);
+    boleta.agregarAlumno(alumno2);
+    boleta.agregarAlumno(crearAlumno("Ana Lopez", 9.0, 8.5, 10.0));
+    boleta.agregarAlumno(crearAlumno("Luis Garcia", 7.0, 7.0, 7.0));
+
+    boleta.listarAprobadosYReprobados();
+
     return 0;
 }
